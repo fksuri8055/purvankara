@@ -52,5 +52,15 @@ function closeModal(modal) {
   modal.classList.remove('active')
   overlay.classList.remove('active')
 }
-
+const navbar = document.querySelector('.header-fixed');
+const menu = document.querySelector('.menu');
+window.onscroll = () => {
+    if (window.scrollY > 150) {
+        navbar.classList.add('header-fixed-dark');
+        menu.classList.add('menu-dark');
+    } else {
+        navbar.classList.remove('header-fixed-dark');
+        menu.classList.remove('menu-dark');
+    }
+};
 // FORM
