@@ -19,11 +19,12 @@ function carousel() {
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
-
+const broucherBtn =document.querySelector('.btn-11')
 openModalButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const modal = document.querySelector(button.dataset.modalTarget)
     openModal(modal)
+    broucherBtn.style.display = 'none'
   })
 })
 
@@ -38,6 +39,7 @@ closeModalButtons.forEach((button) => {
   button.addEventListener('click', () => {
     const modal = button.closest('.modal')
     closeModal(modal)
+    broucherBtn.style.display = 'block'
   })
 })
 
